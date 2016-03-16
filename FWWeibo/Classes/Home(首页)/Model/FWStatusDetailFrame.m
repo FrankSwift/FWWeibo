@@ -45,5 +45,6 @@
     CGFloat w = KScreenWidth;
     self.frame = CGRectMake(x, y, w, h);
     
+    
 }
 @end

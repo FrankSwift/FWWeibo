@@ -1,0 +1,2 @@
+/Users/shanliangyi/Library/Developer/Xcode/DerivedData/FWWeibo-fgbcmfpiqzcubyaxdnggznycqxfx/Build/Products/Debug-iphonesimulator/FWWeibo.app
+
