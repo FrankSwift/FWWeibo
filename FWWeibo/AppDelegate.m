@@ -26,12 +26,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [JSPatch setupLogger:^(NSString *msg) {
-        FWLog(@"%@",msg);
-    }];
-    
-    [JSPatch startWithAppKey:@"appkey"];
-    [JSPatch sync];
+
     // 1.创建窗口
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;

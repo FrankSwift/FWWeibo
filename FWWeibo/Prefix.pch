@@ -89,6 +89,8 @@
 #define HMStatusRetweetedTextFont HMStatusOrginalTextFont
 
 
+// 颜色
+#define HMColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 // 转发微博正文字体
 #define HMStatusHighTextColor HMColor(88, 161, 253)
 
@@ -107,4 +109,24 @@
 #define FWEmotionDidDeleteNotification @"FWEmotionDidDeleteNotification"
 //通知里面取出的key
 #define FWSelectedEmotion @"FWSelectedEmotion"
+
+#define HMStatusCellInset 10
+
+// 原创微博昵称字体
+#define HMStatusOrginalNameFont [UIFont systemFontOfSize:13]
+// 原创微博时间字体
+#define HMStatusOrginalTimeFont [UIFont systemFontOfSize:11]
+// 原创微博来源字体
+#define HMStatusOrginalSourceFont HMStatusOrginalTimeFont
+// 原创微博正文字体
+#define HMStatusOrginalTextFont [UIFont systemFontOfSize:14]
+// 富文本字体
+#define HMStatusRichTextFont HMStatusOrginalTextFont
+
+// 转发微博昵称字体
+#define HMStatusRetweetedNameFont HMStatusOrginalNameFont
+// 转发微博正文字体
+#define HMStatusRetweetedTextFont HMStatusOrginalTextFont
+// 富文本里面出现的链接
+#define HMLinkText @"HMLinkText"
 

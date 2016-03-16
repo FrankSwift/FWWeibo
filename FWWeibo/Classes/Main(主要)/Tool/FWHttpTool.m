@@ -25,7 +25,7 @@
 
 + (void)post:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure{
     AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
-    
+    mgr.responseSerializer = [AFHTTPResponseSerializer serializer];
     [mgr POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

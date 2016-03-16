@@ -87,30 +87,31 @@ static NSMutableArray *_recentEmotions;
     [NSKeyedArchiver archiveRootObject:_recentEmotions toFile:FWRecentFilepath];
 }
 //
-//+ (HMEmotion *)emotionWithDesc:(NSString *)desc
-//{
-//    if (!desc) return nil;
-//    
-//    __block HMEmotion *foundEmotion = nil;
-//    
-//    // 从默认表情中找
-//    [[self defaultEmotions] enumerateObjectsUsingBlock:^(HMEmotion *emotion, NSUInteger idx, BOOL *stop) {
-//        if ([desc isEqualToString:emotion.chs] || [desc isEqualToString:emotion.cht]) {
-//            foundEmotion = emotion;
-//            *stop = YES;
-//        }
-//    }];
-//    if (foundEmotion) return foundEmotion;
-//    
-//    // 从浪小花表情中查找
-//    [[self lxhEmotions] enumerateObjectsUsingBlock:^(HMEmotion *emotion, NSUInteger idx, BOOL *stop) {
-//        if ([desc isEqualToString:emotion.chs] || [desc isEqualToString:emotion.cht]) {
-//            foundEmotion = emotion;
-//            *stop = YES;
-//        }
-//    }];
-//    
-//    return foundEmotion;
-//}
++ (FWEmotion *)emotionWithDesc:(NSString *)desc
+{
+    if (!desc) return nil;
+    
+    __block FWEmotion *foundEmotion = nil;
+    
+    // 从默认表情中找
+    [[self defaultEmotions] enumerateObjectsUsingBlock:^(FWEmotion *emotion, NSUInteger idx, BOOL *stop) {
+        if ([desc isEqualToString:emotion.chs] || [desc isEqualToString:emotion.cht]) {
+            foundEmotion = emotion;
+            *stop = YES;
+        }
+    }];
+    if (foundEmotion) return foundEmotion;
+    
+    // 从浪小花表情中查找
+    [[self lxhEmotions] enumerateObjectsUsingBlock:^(FWEmotion *emotion, NSUInteger idx, BOOL *stop) {
+        if ([desc isEqualToString:emotion.chs] || [desc isEqualToString:emotion.cht]) {
+            foundEmotion = emotion;
+            *stop = YES;
+        }
+    }];
+    
+    return foundEmotion;
+}
+
 
 @end

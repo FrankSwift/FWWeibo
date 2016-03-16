@@ -50,6 +50,10 @@
 		867C861C1C7464340088502F /* FWBaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 867C861B1C7464340088502F /* FWBaseTool.m */; };
 		867C861F1C7467820088502F /* FWAccessTokenParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 867C861E1C7467820088502F /* FWAccessTokenParam.m */; };
 		867C86221C7467EE0088502F /* FWAccessTokenResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 867C86211C7467EE0088502F /* FWAccessTokenResult.m */; };
+		867EF7511C995902008609F6 /* FWEmotionAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 867EF7501C995902008609F6 /* FWEmotionAttachment.m */; };
+		867EF7541C995F0D008609F6 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 867EF7531C995F0D008609F6 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		867EF7561C995F31008609F6 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 867EF7551C995F31008609F6 /* libicucore.tbd */; };
+		867EF7591C995F87008609F6 /* HMRegexResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 867EF7581C995F87008609F6 /* HMRegexResult.m */; };
 		8689D2E91C801FBE00D7B8D3 /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8689D2E81C801FBE00D7B8D3 /* test.plist */; };
 		868DFE4C1C644CE7004FC242 /* FWPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 868DFE4B1C644CE7004FC242 /* FWPopMenu.m */; };
 		86A01B0F1C64397D003B874A /* FWTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A01B0E1C64397D003B874A /* FWTitleButton.m */; };
@@ -168,6 +172,13 @@
 		867C861E1C7467820088502F /* FWAccessTokenParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWAccessTokenParam.m; sourceTree = "<group>"; };
 		867C86201C7467EE0088502F /* FWAccessTokenResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWAccessTokenResult.h; sourceTree = "<group>"; };
 		867C86211C7467EE0088502F /* FWAccessTokenResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWAccessTokenResult.m; sourceTree = "<group>"; };
+		867EF74F1C995902008609F6 /* FWEmotionAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWEmotionAttachment.h; sourceTree = "<group>"; };
+		867EF7501C995902008609F6 /* FWEmotionAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWEmotionAttachment.m; sourceTree = "<group>"; };
+		867EF7521C995F0D008609F6 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		867EF7531C995F0D008609F6 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		867EF7551C995F31008609F6 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		867EF7571C995F87008609F6 /* HMRegexResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMRegexResult.h; sourceTree = "<group>"; };
+		867EF7581C995F87008609F6 /* HMRegexResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMRegexResult.m; sourceTree = "<group>"; };
 		8689D2E81C801FBE00D7B8D3 /* test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = test.plist; sourceTree = "<group>"; };
 		868DFE4A1C644CE7004FC242 /* FWPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWPopMenu.h; sourceTree = "<group>"; };
 		868DFE4B1C644CE7004FC242 /* FWPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWPopMenu.m; sourceTree = "<group>"; };
@@ -244,6 +255,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				867EF7561C995F31008609F6 /* libicucore.tbd in Frameworks */,
 				865DF6C91C91072100EA5342 /* libz.1.2.5.tbd in Frameworks */,
 				865DF6C71C91071500EA5342 /* JavaScriptCore.framework in Frameworks */,
 				865DF6C51C9106E800EA5342 /* JSPatch.framework in Frameworks */,
@@ -257,6 +269,7 @@
 		038212A5B670B14B16EC6E3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				867EF7551C995F31008609F6 /* libicucore.tbd */,
 				865DF6C81C91072100EA5342 /* libz.1.2.5.tbd */,
 				865DF6C61C91071500EA5342 /* JavaScriptCore.framework */,
 				79A0D71762BAFEFC9797AC23 /* libPods-FWWeibo.a */,
@@ -340,6 +353,8 @@
 			children = (
 				86392A421C7D4093009C2BC8 /* FWEmotion.h */,
 				86392A431C7D4093009C2BC8 /* FWEmotion.m */,
+				867EF74F1C995902008609F6 /* FWEmotionAttachment.h */,
+				867EF7501C995902008609F6 /* FWEmotionAttachment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -563,6 +578,8 @@
 				862AB2491C71C62B00BF3789 /* FWStatus.m */,
 				862AB24B1C71C85500BF3789 /* FWPhoto.h */,
 				862AB24C1C71C85500BF3789 /* FWPhoto.m */,
+				867EF7571C995F87008609F6 /* HMRegexResult.h */,
+				867EF7581C995F87008609F6 /* HMRegexResult.m */,
 				86FAED751C76FEBB00E7501F /* FWStatusFrame.h */,
 				86FAED761C76FEBB00E7501F /* FWStatusFrame.m */,
 				86FAED7E1C77097D00E7501F /* FWStatusDetailFrame.h */,
@@ -606,6 +623,8 @@
 		F18C59F81C4E74B10019CB05 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				867EF7521C995F0D008609F6 /* RegexKitLite.h */,
+				867EF7531C995F0D008609F6 /* RegexKitLite.m */,
 				8604D32F1C4F3A89004DBBBA /* UIView+Extension.h */,
 				8604D3301C4F3A89004DBBBA /* UIView+Extension.m */,
 				8604D3321C4F3AA2004DBBBA /* UIBarButtonItem+Extension.h */,
@@ -899,12 +918,14 @@
 				86A01B0F1C64397D003B874A /* FWTitleButton.m in Sources */,
 				86FAED7A1C77058400E7501F /* FWStatusOriginalFrame.m in Sources */,
 				86FAED551C76B18100E7501F /* FWBaseParam.m in Sources */,
+				867EF7541C995F0D008609F6 /* RegexKitLite.m in Sources */,
 				862AB2471C71C56900BF3789 /* FWUser.m in Sources */,
 				867C86101C745E0F0088502F /* FWUserInfoResult.m in Sources */,
 				86FAED771C76FEBB00E7501F /* FWStatusFrame.m in Sources */,
 				86FB66791C7C5E0000D587D8 /* FWEmotionTool.m in Sources */,
 				8604D3311C4F3A89004DBBBA /* UIView+Extension.m in Sources */,
 				867C86161C74609C0088502F /* FWSendStatusParam.m in Sources */,
+				867EF7591C995F87008609F6 /* HMRegexResult.m in Sources */,
 				867C860A1C7450C60088502F /* FWHomeStatusesResult.m in Sources */,
 				86556C301C7C375B007FE421 /* FWEmotionKeyboard.m in Sources */,
 				86B4E1041C7080A6000B565D /* FWOAuthViewController.m in Sources */,
@@ -938,6 +959,7 @@
 				867C86191C7460F70088502F /* FWSendStatusResult.m in Sources */,
 				862AB2441C71B7FB00BF3789 /* Foundation+Log.m in Sources */,
 				F18C5A071C4E75780019CB05 /* FWTabBarViewController.m in Sources */,
+				867EF7511C995902008609F6 /* FWEmotionAttachment.m in Sources */,
 				86EAE25F1C7AD4C6008AEDA7 /* NSDate+MJ.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

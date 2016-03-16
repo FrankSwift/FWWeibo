@@ -145,7 +145,7 @@
 - (void)sendStatusWithoutImages{
     FWSendStatusParam *param = [[FWSendStatusParam alloc] init];
     param.access_token = [FWAccountTool account].access_token;
-    param.status = self.textView.text;
+    param.status = self.textView.realText;
     [FWStatusTool sendStatus:param success:^(FWSendStatusResult *result) {
         [MBProgressHUD showSuccess:@"发表成功"];
     } failure:^(NSError *error) {
@@ -313,7 +313,7 @@
 }
 
 - (void)textViewDidChange:(UITextView *)textView{
-    self.navigationItem.rightBarButtonItem.enabled = self.textView.attributedText.length;
+    self.navigationItem.rightBarButtonItem.enabled = self.textView.hasText;
 }
 
 #pragma mark - UINavigationControllerDelegate, UIImagePickerControllerDelegate
@@ -323,7 +323,7 @@
     // 1.取出选中的图片
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
-    // 2.
+    // 2.将图片添加到相册
     [self.photosView addImage:image];
     
 }
