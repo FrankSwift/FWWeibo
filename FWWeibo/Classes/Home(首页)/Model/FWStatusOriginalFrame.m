@@ -42,7 +42,6 @@
     CGFloat textY = CGRectGetMaxY(self.iconFrame) + HMStatusCellInset * 0.5;
     CGFloat maxW = KScreenWidth - 2 * textX;
     CGSize maxSize = CGSizeMake(maxW, MAXFLOAT);
-    
     // 删掉最前面的昵称
 //    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithAttributedString:status.attributedText];
 //    if (status.isRetweeted) {

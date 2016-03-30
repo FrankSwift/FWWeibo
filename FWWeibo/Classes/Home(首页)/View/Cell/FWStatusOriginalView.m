@@ -12,12 +12,13 @@
 #import "FWUser.h"
 #import "UIImageView+WebCache.h"
 #import "FWStatusPhotosView.h"
+#import "FWStatusLabel.h"
 
 @interface FWStatusOriginalView ()
 /** 昵称 */
 @property (nonatomic, weak) UILabel *nameLabel;
 /** 正文 */
-@property (nonatomic, weak) UILabel *textLabel;
+@property (nonatomic, weak) FWStatusLabel *textLabel;
 /** 来源 */
 @property (nonatomic, weak) UILabel *sourceLabel;
 /** 时间 */
@@ -42,9 +43,7 @@
         self.nameLabel = nameLabel;
         
         // 2.正文（内容）
-        UILabel *textLabel = [[UILabel alloc] init];
-        textLabel.numberOfLines = 0;
-        textLabel.font = HMStatusOrginalTextFont;
+        FWStatusLabel  *textLabel = [[FWStatusLabel alloc] init];
         [self addSubview:textLabel];
         self.textLabel = textLabel;
         
@@ -107,7 +106,7 @@
     }
     
     // 2.正文（内容）
-//    if (status.isRetweeted) {
+//    if (!status.isRetweeted) {
 //        NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithAttributedString:status.attributedText];
 //        int len = user.name.length + 4;
 //        [text deleteCharactersInRange:NSMakeRange(0, len)];
@@ -115,7 +114,11 @@
 //    } else {
 //        self.textLabel.attributedText = status.attributedText;
 //    }
-    self.textLabel.text = status.text;
+//    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithAttributedString:status.attributedText];
+//    int len = user.name.length + 2;
+//    [text deleteCharactersInRange:NSMakeRange(0, len)];
+//    self.textLabel.attributedText = text;
+    self.textLabel.attributedText = status.attributedText;
     self.textLabel.frame = originalFrame.textFrame;
     
     // 3.时间

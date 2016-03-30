@@ -15,7 +15,7 @@
 
 
 /** 昵称 */
-@property (nonatomic, assign) CGRect nameFrame;
+//@property (nonatomic, assign) CGRect nameFrame;
 /** 正文 */
 @property (nonatomic, assign) CGRect textFrame;
 /** 配图相册  */

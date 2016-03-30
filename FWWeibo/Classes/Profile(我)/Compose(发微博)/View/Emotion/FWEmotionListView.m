@@ -53,6 +53,7 @@
  */
 - (void)setupPageControl{
     UIPageControl *pageControl = [[UIPageControl alloc] init];
+    pageControl.hidesForSinglePage = YES;
     [self addSubview:pageControl];
     self.pageControl = pageControl;
     

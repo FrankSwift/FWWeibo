@@ -64,7 +64,7 @@
     __block FWEmotionView *foundEmotionView = nil;
     
     [self.emotionArray enumerateObjectsUsingBlock:^(FWEmotionView *emotionView, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (CGRectContainsPoint(emotionView.frame, point)) {
+        if (CGRectContainsPoint(emotionView.frame, point) || emotionView.hidden == NO) {
             foundEmotionView = emotionView;
             //停止遍历
             *stop = YES;

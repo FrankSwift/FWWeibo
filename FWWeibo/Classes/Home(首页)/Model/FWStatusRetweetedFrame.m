@@ -17,17 +17,6 @@
 - (void)setRetweetedStatus:(FWStatus *)retweetedStatus{
     _retweetedStatus = retweetedStatus;
     
-    // 0.昵称
-//    NSString *username = [NSString stringWithFormat:@"@%@:",retweetedStatus.user];
-//    CGFloat nameX = HMStatusCellInset;
-//    CGFloat maxW = KScreenWidth - 2 * nameX;
-//    CGSize maxSize = CGSizeMake(maxW, MAXFLOAT);
-//    CGSize nameSize = [username boundingRectWithSize:maxSize options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : HMStatusRetweetedNameFont} context:nil].size;
-//    CGFloat nameY = HMStatusCellInset * 0.5;
-//    CGFloat nameW = nameSize.width;
-//    CGFloat nameH = nameSize.height;
-//    self.nameFrame = CGRectMake(nameX, nameY, nameW, nameH);
-    
     NSString *retext = [NSString stringWithFormat:@"@%@:%@",retweetedStatus.user.name,retweetedStatus.text];
     // 1.正文
     CGFloat h = 0;
@@ -51,19 +40,19 @@
     }
     
     // 3.工具条
-//    if (retweetedStatus.isDetail) { // 展示在详情里面， 需要显示toolbar
-//        CGFloat toolbarY = 0;
-//        CGFloat toolbarW = 200;
-//        CGFloat toolbarX = HMScreenW - toolbarW;
-//        CGFloat toolbarH = 20;
-//        if (retweetedStatus.pic_urls.count) {
-//            toolbarY = CGRectGetMaxY(self.photosFrame) + HMStatusCellInset;
-//        } else {
-//            toolbarY = CGRectGetMaxY(self.textFrame) + HMStatusCellInset;
-//        }
-//        self.toolbarFrame = CGRectMake(toolbarX, toolbarY, toolbarW, toolbarH);
-//        h = CGRectGetMaxY(self.toolbarFrame) + HMStatusCellInset;
-//    }
+    if (retweetedStatus.isDetail) { // 展示在详情里面， 需要显示toolbar
+        CGFloat toolbarY = 0;
+        CGFloat toolbarW = 200;
+        CGFloat toolbarX = KScreenWidth - toolbarW;
+        CGFloat toolbarH = 20;
+        if (retweetedStatus.pic_urls.count) {
+            toolbarY = CGRectGetMaxY(self.photosFrame) + HMStatusCellInset;
+        } else {
+            toolbarY = CGRectGetMaxY(self.textFrame) + HMStatusCellInset;
+        }
+        self.toolbarFrame = CGRectMake(toolbarX, toolbarY, toolbarW, toolbarH);
+        h = CGRectGetMaxY(self.toolbarFrame) + HMStatusCellInset;
+    }
     
     // 自己
     CGFloat x = 0;

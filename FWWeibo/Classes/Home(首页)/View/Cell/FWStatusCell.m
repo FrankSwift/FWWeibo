@@ -72,9 +72,7 @@
     
     self.toolbar.frame = statusFrame.toolFrame;
     
-    
     self.toolbar.status = statusFrame.status;
-
 }
 
 + (instancetype)cellWithTableView:(UITableView *)tableView{

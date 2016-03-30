@@ -11,14 +11,17 @@
 #import "FWStatus.h"
 #import "FWUser.h"
 #import "FWStatusPhotosView.h"
-
+#import "FWStatusLabel.h"
+#import "FWStatusRetweetedToolbar.h"
 @interface FWStatusRetweetedView()
 /** 昵称 */
-@property (nonatomic, weak) UILabel *nameLabel;
+//@property (nonatomic, weak) UILabel *nameLabel;
 /** 正文 */
-@property (nonatomic, weak) UILabel *textLabel;
+@property (nonatomic, weak) FWStatusLabel *textLabel;
 /* 配图相册 */
 @property (nonatomic, weak) FWStatusPhotosView *photosView;
+/* 配图相册 */
+@property (nonatomic, weak) FWStatusRetweetedToolbar *toolbar;
 
 @end
 @implementation FWStatusRetweetedView
@@ -28,26 +31,22 @@
         self.image = [UIImage resizeImage:@"timeline_retweet_background"];
         self.highlightedImage = [UIImage resizeImage:@"timeline_retweet_background_highlighted"];
         self.userInteractionEnabled = YES;
+    
         
-        // 1.昵称
-        UILabel *nameLabel = [[UILabel alloc] init];
-        nameLabel.font = HMStatusRetweetedNameFont;
-        nameLabel.textColor = FWColor(74, 102, 105, 1.0);
-        [self addSubview:nameLabel];
-        self.nameLabel = nameLabel;
-        
-        // 2.正文（内容）
-        UILabel *textLabel = [[UILabel alloc] init];
-        textLabel.numberOfLines = 0;
-        textLabel.font = HMStatusRetweetedTextFont;
+        // 1.正文（内容）
+        FWStatusLabel*textLabel = [[FWStatusLabel alloc] init];
         [self addSubview:textLabel];
         self.textLabel = textLabel;
         
-        // 3.配图相册
+        // 2.配图相册
         FWStatusPhotosView *photosView = [[FWStatusPhotosView alloc] init];
         [self addSubview:photosView];
         self.photosView = photosView;
         
+        // 3.工具条
+        FWStatusRetweetedToolbar *toolbar = [[FWStatusRetweetedToolbar alloc] init];
+        [self addSubview:toolbar];
+        self.toolbar = toolbar;
     }
     
     return self;
@@ -73,15 +72,10 @@
     } else {
         self.photosView.hidden = YES;
     }
-    
+
     // 3.工具条
-//    if (retweetedStatus.isDetail) {
-//        self.toolbar.frame = retweetedFrame.toolbarFrame;
-//        self.toolbar.status = retweetedFrame.retweetedStatus;
-//        self.toolbar.hidden = NO;
-//    } else {
-//        self.toolbar.hidden = YES;
-//    }
+    self.toolbar.frame = retweetedFrame.toolbarFrame;
+    self.toolbar.status = retweetedStatus.retweeted_status;
 
 }
 

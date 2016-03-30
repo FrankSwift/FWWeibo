@@ -23,6 +23,8 @@
 #import "FWStatusCell.h"
 #import "LPFPSLabel.h"
 
+#import "FWStatusDetailViewController.h"
+
 
 @interface FWHomeViewController ()
 /** 微博数组(存放所有的微博frame数据) */
@@ -63,8 +65,23 @@
     // 获取用户信息
     [self setupUserInfo];
     
+    // 监听链接选中的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(linkDidSelected:) name:FWLinkDidSelectedNotificaion object:nil];
+    
 }
 
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)linkDidSelected:(NSNotification *)note{
+    NSString *linkTest = note.userInfo[HMLinkText];
+    if ([linkTest hasPrefix:@"http"]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkTest]];
+    }else{
+        //跳转控制器
+    }
+}
 #pragma mark - 数据
 #pragma mark 获取用户信息
 - (void)setupUserInfo{
@@ -312,6 +329,14 @@
     cell.backgroundColor = KColor(clearColor);
     
     cell.statusFrame = statusFrame;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    FWStatusDetailViewController *detail = [[FWStatusDetailViewController alloc] init];
+    FWStatusFrame *frame = self.statusFrames[indexPath.row];
+    detail.status = frame.status;
+    [self.navigationController pushViewController:detail animated:YES];
 }
 
 #pragma mark - ScrollView Delegate

@@ -24,6 +24,7 @@
 
 - (void)encodeWithCoder:(NSCoder *)aCoder{
     [aCoder encodeObject:self.chs forKey:@"chs"];
+    [aCoder encodeObject:self.chs forKey:@"cht"];
     [aCoder encodeObject:self.png forKey:@"png"];
     [aCoder encodeObject:self.coder forKey:@"coder"];
     [aCoder encodeObject:self.finderPath forKey:@"finderPath"];
@@ -34,6 +35,7 @@
     self = [super init];
     if (self) {
         self.chs = [coder decodeObjectForKey:@"chs"];
+        self.cht = [coder decodeObjectForKey:@"cht"];
         self.png = [coder decodeObjectForKey:@"png"];
         self.coder = [coder decodeObjectForKey:@"coder"];
         self.finderPath = [coder decodeObjectForKey:@"finderPath"];
@@ -45,7 +47,7 @@
     if (self.coder) {
         return [self.coder isEqualToString:otherEmotion.coder];
     }else{
-        return [self.png isEqualToString:otherEmotion.png] && [self.chs isEqualToString:otherEmotion.chs];
+        return [self.png isEqualToString:otherEmotion.png] && ([self.chs isEqualToString:otherEmotion.chs] || [self.cht isEqualToString:otherEmotion.cht]);
     }
 }
 @end

@@ -80,8 +80,17 @@
 		86FAED7D1C77058D00E7501F /* FWStatusRetweetedFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FAED7C1C77058D00E7501F /* FWStatusRetweetedFrame.m */; };
 		86FAED801C77097D00E7501F /* FWStatusDetailFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FAED7F1C77097D00E7501F /* FWStatusDetailFrame.m */; };
 		86FB66791C7C5E0000D587D8 /* FWEmotionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FB66781C7C5E0000D587D8 /* FWEmotionTool.m */; };
+		F124EA0D1C9BCB6B00657EA8 /* FWCommonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F124EA0C1C9BCB6B00657EA8 /* FWCommonGroup.m */; };
+		F124EA101C9BCB7900657EA8 /* FWCommonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F124EA0F1C9BCB7900657EA8 /* FWCommonItem.m */; };
 		F126B3D21C4D17D500516A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F126B3D11C4D17D500516A04 /* Assets.xcassets */; };
 		F126B3D51C4D17D500516A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F126B3D31C4D17D500516A04 /* LaunchScreen.storyboard */; };
+		F1279DEC1C9D16A900438754 /* FWStatusLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1279DEB1C9D16A900438754 /* FWStatusLabel.m */; };
+		F1279DEF1C9D23C600438754 /* FWLink.m in Sources */ = {isa = PBXBuildFile; fileRef = F1279DEE1C9D23C600438754 /* FWLink.m */; };
+		F12A167A1C9E6B1D0074AF8D /* FWCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F12A16791C9E6B1D0074AF8D /* FWCommonCell.m */; };
+		F12A16831C9E79510074AF8D /* FWCommonLabelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F12A167C1C9E79510074AF8D /* FWCommonLabelItem.m */; };
+		F12A16841C9E79510074AF8D /* FWCommonArrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F12A167E1C9E79510074AF8D /* FWCommonArrowItem.m */; };
+		F12A16851C9E79510074AF8D /* FWCommonSwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F12A16801C9E79510074AF8D /* FWCommonSwitchItem.m */; };
+		F17506BF1C9E8C6F00081E2D /* FWStatusDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17506BE1C9E8C6F00081E2D /* FWStatusDetailViewController.m */; };
 		F18C59ED1C4E73930019CB05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F18C59EC1C4E73930019CB05 /* AppDelegate.m */; };
 		F18C5A071C4E75780019CB05 /* FWTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18C5A061C4E75780019CB05 /* FWTabBarViewController.m */; };
 		F18C5A0A1C4E75C50019CB05 /* FWDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18C5A091C4E75C50019CB05 /* FWDiscoverViewController.m */; };
@@ -89,6 +98,8 @@
 		F18C5A101C4E75E70019CB05 /* FWMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18C5A0F1C4E75E70019CB05 /* FWMessageViewController.m */; };
 		F18C5A131C4E75FD0019CB05 /* FWProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18C5A121C4E75FD0019CB05 /* FWProfileViewController.m */; };
 		F18C5A381C4E7BF80019CB05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F18C5A371C4E7BF80019CB05 /* main.m */; };
+		F1F9163E1C9F8756001929E0 /* FWStatusBaseToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F9163D1C9F8756001929E0 /* FWStatusBaseToolbar.m */; };
+		F1F916411C9F894A001929E0 /* FWStatusRetweetedToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F916401C9F894A001929E0 /* FWStatusRetweetedToolbar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,7 +213,7 @@
 		86EAE25D1C7AD4C6008AEDA7 /* NSDate+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MJ.h"; sourceTree = "<group>"; };
 		86EAE25E1C7AD4C6008AEDA7 /* NSDate+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MJ.m"; sourceTree = "<group>"; };
 		86EAE2601C7AF829008AEDA7 /* FWStatusPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWStatusPhotosView.h; sourceTree = "<group>"; };
-		86EAE2611C7AF829008AEDA7 /* FWStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWStatusPhotosView.m; sourceTree = "<group>"; };
+		86EAE2611C7AF829008AEDA7 /* FWStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FWStatusPhotosView.m; path = "../Home(首页)/View/Cell/FWStatusPhotosView.m"; sourceTree = "<group>"; };
 		86EAE2631C7AF840008AEDA7 /* FWStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWStatusPhotoView.h; sourceTree = "<group>"; };
 		86EAE2641C7AF840008AEDA7 /* FWStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWStatusPhotoView.m; sourceTree = "<group>"; };
 		86FAED501C76B11D00E7501F /* FWUnreadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWUnreadParam.h; sourceTree = "<group>"; };
@@ -230,11 +241,29 @@
 		86FB66771C7C5E0000D587D8 /* FWEmotionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWEmotionTool.h; sourceTree = "<group>"; };
 		86FB66781C7C5E0000D587D8 /* FWEmotionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWEmotionTool.m; sourceTree = "<group>"; };
 		8E59D1CCF3C7699369C814B9 /* Pods-FWWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FWWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FWWeibo/Pods-FWWeibo.debug.xcconfig"; sourceTree = "<group>"; };
+		F124EA0B1C9BCB6B00657EA8 /* FWCommonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWCommonGroup.h; sourceTree = "<group>"; };
+		F124EA0C1C9BCB6B00657EA8 /* FWCommonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWCommonGroup.m; sourceTree = "<group>"; };
+		F124EA0E1C9BCB7900657EA8 /* FWCommonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWCommonItem.h; sourceTree = "<group>"; };
+		F124EA0F1C9BCB7900657EA8 /* FWCommonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWCommonItem.m; sourceTree = "<group>"; };
 		F126B3C21C4D17D500516A04 /* FWWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FWWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F126B3D11C4D17D500516A04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F126B3D41C4D17D500516A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F126B3D61C4D17D500516A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1279DEA1C9D16A900438754 /* FWStatusLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWStatusLabel.h; sourceTree = "<group>"; };
+		F1279DEB1C9D16A900438754 /* FWStatusLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWStatusLabel.m; sourceTree = "<group>"; };
+		F1279DED1C9D23C600438754 /* FWLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWLink.h; sourceTree = "<group>"; };
+		F1279DEE1C9D23C600438754 /* FWLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWLink.m; sourceTree = "<group>"; };
+		F12A16781C9E6B1D0074AF8D /* FWCommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWCommonCell.h; sourceTree = "<group>"; };
+		F12A16791C9E6B1D0074AF8D /* FWCommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWCommonCell.m; sourceTree = "<group>"; };
+		F12A167B1C9E79510074AF8D /* FWCommonLabelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWCommonLabelItem.h; sourceTree = "<group>"; };
+		F12A167C1C9E79510074AF8D /* FWCommonLabelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWCommonLabelItem.m; sourceTree = "<group>"; };
+		F12A167D1C9E79510074AF8D /* FWCommonArrowItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWCommonArrowItem.h; sourceTree = "<group>"; };
+		F12A167E1C9E79510074AF8D /* FWCommonArrowItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWCommonArrowItem.m; sourceTree = "<group>"; };
+		F12A167F1C9E79510074AF8D /* FWCommonSwitchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWCommonSwitchItem.h; sourceTree = "<group>"; };
+		F12A16801C9E79510074AF8D /* FWCommonSwitchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWCommonSwitchItem.m; sourceTree = "<group>"; };
 		F14EABA11C4D2FEB00C47861 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		F17506BD1C9E8C6F00081E2D /* FWStatusDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWStatusDetailViewController.h; sourceTree = "<group>"; };
+		F17506BE1C9E8C6F00081E2D /* FWStatusDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWStatusDetailViewController.m; sourceTree = "<group>"; };
 		F18C59EB1C4E73930019CB05 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F18C59EC1C4E73930019CB05 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F18C5A051C4E75780019CB05 /* FWTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWTabBarViewController.h; sourceTree = "<group>"; };
@@ -248,6 +277,10 @@
 		F18C5A111C4E75FD0019CB05 /* FWProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWProfileViewController.h; sourceTree = "<group>"; };
 		F18C5A121C4E75FD0019CB05 /* FWProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWProfileViewController.m; sourceTree = "<group>"; };
 		F18C5A371C4E7BF80019CB05 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Classes/Profile(我)/main.m"; sourceTree = "<group>"; };
+		F1F9163C1C9F8756001929E0 /* FWStatusBaseToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWStatusBaseToolbar.h; sourceTree = "<group>"; };
+		F1F9163D1C9F8756001929E0 /* FWStatusBaseToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWStatusBaseToolbar.m; sourceTree = "<group>"; };
+		F1F9163F1C9F894A001929E0 /* FWStatusRetweetedToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWStatusRetweetedToolbar.h; sourceTree = "<group>"; };
+		F1F916401C9F894A001929E0 /* FWStatusRetweetedToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWStatusRetweetedToolbar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -438,12 +471,17 @@
 				86FAED701C76F99600E7501F /* FWStatusOriginalView.m */,
 				86FAED721C76F9E100E7501F /* FWStatusRetweetedView.h */,
 				86FAED731C76F9E100E7501F /* FWStatusRetweetedView.m */,
+				F1F9163C1C9F8756001929E0 /* FWStatusBaseToolbar.h */,
+				F1F9163D1C9F8756001929E0 /* FWStatusBaseToolbar.m */,
 				86EAE25A1C7AABE1008AEDA7 /* FWStatusToolBar.h */,
 				86EAE25B1C7AABE1008AEDA7 /* FWStatusToolBar.m */,
+				F1F9163F1C9F894A001929E0 /* FWStatusRetweetedToolbar.h */,
+				F1F916401C9F894A001929E0 /* FWStatusRetweetedToolbar.m */,
 				86EAE2601C7AF829008AEDA7 /* FWStatusPhotosView.h */,
-				86EAE2611C7AF829008AEDA7 /* FWStatusPhotosView.m */,
 				86EAE2631C7AF840008AEDA7 /* FWStatusPhotoView.h */,
 				86EAE2641C7AF840008AEDA7 /* FWStatusPhotoView.m */,
+				F1279DEA1C9D16A900438754 /* FWStatusLabel.h */,
+				F1279DEB1C9D16A900438754 /* FWStatusLabel.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -455,6 +493,23 @@
 				86FB66781C7C5E0000D587D8 /* FWEmotionTool.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		F124EA0A1C9BCB5100657EA8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F124EA0B1C9BCB6B00657EA8 /* FWCommonGroup.h */,
+				F124EA0C1C9BCB6B00657EA8 /* FWCommonGroup.m */,
+				F124EA0E1C9BCB7900657EA8 /* FWCommonItem.h */,
+				F124EA0F1C9BCB7900657EA8 /* FWCommonItem.m */,
+				F12A167B1C9E79510074AF8D /* FWCommonLabelItem.h */,
+				F12A167C1C9E79510074AF8D /* FWCommonLabelItem.m */,
+				F12A167D1C9E79510074AF8D /* FWCommonArrowItem.h */,
+				F12A167E1C9E79510074AF8D /* FWCommonArrowItem.m */,
+				F12A167F1C9E79510074AF8D /* FWCommonSwitchItem.h */,
+				F12A16801C9E79510074AF8D /* FWCommonSwitchItem.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		F126B3B91C4D17D500516A04 = {
@@ -565,6 +620,8 @@
 			children = (
 				F18C5A0B1C4E75D30019CB05 /* FWHomeViewController.h */,
 				F18C5A0C1C4E75D30019CB05 /* FWHomeViewController.m */,
+				F17506BD1C9E8C6F00081E2D /* FWStatusDetailViewController.h */,
+				F17506BE1C9E8C6F00081E2D /* FWStatusDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -588,6 +645,8 @@
 				86FAED791C77058400E7501F /* FWStatusOriginalFrame.m */,
 				86FAED7B1C77058D00E7501F /* FWStatusRetweetedFrame.h */,
 				86FAED7C1C77058D00E7501F /* FWStatusRetweetedFrame.m */,
+				F1279DED1C9D23C600438754 /* FWLink.h */,
+				F1279DEE1C9D23C600438754 /* FWLink.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -656,6 +715,7 @@
 		F18C59FA1C4E74B10019CB05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F124EA0A1C9BCB5100657EA8 /* Common */,
 				862AB23D1C71A74300BF3789 /* FWAccount.h */,
 				862AB23E1C71A74300BF3789 /* FWAccount.m */,
 				867C86051C744FC10088502F /* FWHomeStatusParam.h */,
@@ -696,6 +756,8 @@
 			children = (
 				8657ACF51C5B0AF5001927B6 /* FWTabBar.h */,
 				8657ACF61C5B0AF5001927B6 /* FWTabBar.m */,
+				F12A16781C9E6B1D0074AF8D /* FWCommonCell.h */,
+				F12A16791C9E6B1D0074AF8D /* FWCommonCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -703,6 +765,7 @@
 		F18C59FD1C4E74B10019CB05 /* Message(消息) */ = {
 			isa = PBXGroup;
 			children = (
+				86EAE2611C7AF829008AEDA7 /* FWStatusPhotosView.m */,
 				F18C59FE1C4E74B10019CB05 /* Controller */,
 				F18C59FF1C4E74B10019CB05 /* Model */,
 				F18C5A001C4E74B10019CB05 /* View */,
@@ -890,6 +953,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F9163E1C9F8756001929E0 /* FWStatusBaseToolbar.m in Sources */,
 				86EAE2621C7AF829008AEDA7 /* FWStatusPhotosView.m in Sources */,
 				86CE84D11C72F76000DBD9B0 /* FWTextView.m in Sources */,
 				867C86011C743B760088502F /* FWHttpTool.m in Sources */,
@@ -898,8 +962,12 @@
 				867C861F1C7467820088502F /* FWAccessTokenParam.m in Sources */,
 				86FAED6C1C76F93A00E7501F /* FWStatusCell.m in Sources */,
 				86B4E0FF1C701734000B565D /* FWNewfeatureViewController.m in Sources */,
+				F12A16851C9E79510074AF8D /* FWCommonSwitchItem.m in Sources */,
+				F124EA101C9BCB7900657EA8 /* FWCommonItem.m in Sources */,
 				862AB23F1C71A74300BF3789 /* FWAccount.m in Sources */,
 				862AB24A1C71C62B00BF3789 /* FWStatus.m in Sources */,
+				F17506BF1C9E8C6F00081E2D /* FWStatusDetailViewController.m in Sources */,
+				F1F916411C9F894A001929E0 /* FWStatusRetweetedToolbar.m in Sources */,
 				862250951C7F059C0095BDB0 /* NSString+Emoji.m in Sources */,
 				862AB24D1C71C85500BF3789 /* FWPhoto.m in Sources */,
 				86556C331C7C3A04007FE421 /* FWEmotionListView.m in Sources */,
@@ -916,6 +984,7 @@
 				86392A441C7D4093009C2BC8 /* FWEmotion.m in Sources */,
 				862AB24F1C86768A00ACF453 /* FWEmotionPopView.m in Sources */,
 				86A01B0F1C64397D003B874A /* FWTitleButton.m in Sources */,
+				F1279DEC1C9D16A900438754 /* FWStatusLabel.m in Sources */,
 				86FAED7A1C77058400E7501F /* FWStatusOriginalFrame.m in Sources */,
 				86FAED551C76B18100E7501F /* FWBaseParam.m in Sources */,
 				867EF7541C995F0D008609F6 /* RegexKitLite.m in Sources */,
@@ -932,6 +1001,7 @@
 				F18C5A131C4E75FD0019CB05 /* FWProfileViewController.m in Sources */,
 				862AB2541C86CBBE00ACF453 /* FWEmotionTextView.m in Sources */,
 				867C86131C745E360088502F /* FWUserTool.m in Sources */,
+				F12A16841C9E79510074AF8D /* FWCommonArrowItem.m in Sources */,
 				86FAED6D1C76F93A00E7501F /* FWStatusDetailView.m in Sources */,
 				86EAE2651C7AF840008AEDA7 /* FWStatusPhotoView.m in Sources */,
 				86CE84CC1C72ECA100DBD9B0 /* FWLoadMoreFooter.m in Sources */,
@@ -939,6 +1009,7 @@
 				86FAED521C76B11D00E7501F /* FWUnreadParam.m in Sources */,
 				8657AD061C5B4C76001927B6 /* FWComposeViewController.m in Sources */,
 				8657ACFA1C5B36F0001927B6 /* UIImage+Extension.m in Sources */,
+				F12A16831C9E79510074AF8D /* FWCommonLabelItem.m in Sources */,
 				F18C59ED1C4E73930019CB05 /* AppDelegate.m in Sources */,
 				86FAED7D1C77058D00E7501F /* FWStatusRetweetedFrame.m in Sources */,
 				F18C5A101C4E75E70019CB05 /* FWMessageViewController.m in Sources */,
@@ -950,15 +1021,18 @@
 				868DFE4C1C644CE7004FC242 /* FWPopMenu.m in Sources */,
 				86CE84D41C7304AD00DBD9B0 /* FWComposeToolBar.m in Sources */,
 				86FAED741C76F9E100E7501F /* FWStatusRetweetedView.m in Sources */,
+				F1279DEF1C9D23C600438754 /* FWLink.m in Sources */,
 				F18C5A0D1C4E75D30019CB05 /* FWHomeViewController.m in Sources */,
 				86EAE25C1C7AABE1008AEDA7 /* FWStatusToolBar.m in Sources */,
 				86FAED711C76F99600E7501F /* FWStatusOriginalView.m in Sources */,
 				8604D32E1C4F37E9004DBBBA /* FWNavigationController.m in Sources */,
+				F12A167A1C9E6B1D0074AF8D /* FWCommonCell.m in Sources */,
 				F18C5A0A1C4E75C50019CB05 /* FWDiscoverViewController.m in Sources */,
 				F18C5A381C4E7BF80019CB05 /* main.m in Sources */,
 				867C86191C7460F70088502F /* FWSendStatusResult.m in Sources */,
 				862AB2441C71B7FB00BF3789 /* Foundation+Log.m in Sources */,
 				F18C5A071C4E75780019CB05 /* FWTabBarViewController.m in Sources */,
+				F124EA0D1C9BCB6B00657EA8 /* FWCommonGroup.m in Sources */,
 				867EF7511C995902008609F6 /* FWEmotionAttachment.m in Sources */,
 				86EAE25F1C7AD4C6008AEDA7 /* NSDate+MJ.m in Sources */,
 			);

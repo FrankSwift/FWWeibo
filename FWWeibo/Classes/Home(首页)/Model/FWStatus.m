@@ -78,18 +78,15 @@
     _source = [NSString stringWithFormat:@"来自%@", subsource];
 }
 
-- (NSAttributedString *)attributedText{
-    
-        NSString *result = [NSString stringWithFormat:@"@%@:%@",self.user.name,self.text];
-        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:result];
-        [attributedString addAttributes:@{NSForegroundColorAttributeName : KColor(blueColor)} range:NSMakeRange(0, self.user.name.length + 2)];
-        return attributedString;
- 
-    
-}
 
 - (void)setText:(NSString *)text{
-    _text = text;
+    _text = [text copy];
+    
+    [self createAttributedText];
+}
+
+- (void)setUser:(FWUser *)user{
+    _user = user;
     
     [self createAttributedText];
 }
@@ -133,15 +130,17 @@
 
 - (void)createAttributedText
 {
-    if (self.text == nil || self.user == nil) return;
-    
-    if (self.retweeted_status) {
-        NSString *totalText = [NSString stringWithFormat:@"@%@ : %@", self.user.name, self.text];
-        NSAttributedString *attributedString = [self attributedStringWithText:totalText];
-        self.attributedText = attributedString;
-    } else {
-        self.attributedText = [self attributedStringWithText:self.text];
-    }
+    if (self.text == nil || self.user == nil || self.attributedText != nil) return;
+    NSAttributedString *attributedString = [self attributedStringWithText:self.text];
+    self.attributedText = attributedString;
+//    if (self.retweeted) {
+//        NSString *totalText = [NSString stringWithFormat:@"@%@:%@", self.user.name, self.text];
+//        NSAttributedString *attributedString = [self attributedStringWithText:totalText];
+//        self.attributedText = attributedString;
+//    }else{
+//        NSAttributedString *attributedString = [self attributedStringWithText:self.text];
+//        self.attributedText = attributedString;
+//    }
 }
 
 - (NSAttributedString *)attributedStringWithText:(NSString *)text{
@@ -202,4 +201,27 @@
     return attributedString;
 
 }
+
+- (void)setRetweeted_status:(FWStatus *)retweeted_status{
+    _retweeted_status = retweeted_status;
+    
+    self.retweeted = NO;
+    retweeted_status.retweeted = YES;
+}
+
+- (void)setRetweeted:(BOOL)retweeted{
+    _retweeted = retweeted;
+    
+    if (self.retweeted) {
+        NSString *totalText = [NSString stringWithFormat:@"@%@:%@", self.user.name, self.text];
+        NSAttributedString *attributedString = [self attributedStringWithText:totalText];
+        self.attributedText = attributedString;
+    }else{
+        NSAttributedString *attributedString = [self attributedStringWithText:self.text];
+        self.attributedText = attributedString;
+    }
+    
+//    [self createAttributedText];
+}
+
 @end

@@ -109,6 +109,9 @@
 #define FWEmotionDidDeleteNotification @"FWEmotionDidDeleteNotification"
 //通知里面取出的key
 #define FWSelectedEmotion @"FWSelectedEmotion"
+// 选中链接的通知
+#define FWLinkDidSelectedNotificaion @"FWLinkDidSelectedNotificaion"
+
 
 #define HMStatusCellInset 10
 
@@ -121,7 +124,8 @@
 // 原创微博正文字体
 #define HMStatusOrginalTextFont [UIFont systemFontOfSize:14]
 // 富文本字体
-#define HMStatusRichTextFont HMStatusOrginalTextFont
+#define HMStatusRichTextFont [UIFont systemFontOfSize:13]
+
 
 // 转发微博昵称字体
 #define HMStatusRetweetedNameFont HMStatusOrginalNameFont
